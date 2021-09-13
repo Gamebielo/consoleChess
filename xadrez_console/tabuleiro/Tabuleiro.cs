@@ -39,6 +39,17 @@
             p.posicao = pos;
         }
 
+        public Peca retirarPeca(Posicao pos)
+        {
+            if (peca(pos) == null)
+            {
+                return null;
+            }
+            Peca aux = peca(pos);
+            aux.posicao = null; // Marca a posicao dela como nula
+            pecas[pos.linha, pos.coluna] = null; // Pos do tabuleiro nula
+            return aux;
+        }
         public bool posicaoValida(Posicao pos)
         {
             if (pos.linha < 0 || pos.linha >= linhas || pos.coluna < 0 || pos.coluna >= colunas)
