@@ -34,7 +34,7 @@
                 {
                     if (mat[i,j])
                     {
-                        // Existe mpvimento possível
+                        // Existe movimento possível
                         return true;
                     }
                 }
